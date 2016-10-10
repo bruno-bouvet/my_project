@@ -1,0 +1,29 @@
+WCS\CoavBundle\Entity\Terrain:
+    type: entity
+    table: null
+    repositoryClass: WCS\CoavBundle\Repository\TerrainRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        icao:
+            type: string
+            length: '4'
+            nullable: false
+        latitude:
+            type: float
+        longitude:
+            type: float
+        city:
+            type: string
+            length: 255
+        country:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

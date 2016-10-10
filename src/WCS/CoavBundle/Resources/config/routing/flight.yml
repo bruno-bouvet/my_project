@@ -1,0 +1,24 @@
+flight_index:
+    path:     /
+    defaults: { _controller: "WCSCoavBundle:Flight:index" }
+    methods:  GET
+
+flight_show:
+    path:     /{id}/show
+    defaults: { _controller: "WCSCoavBundle:Flight:show" }
+    methods:  GET
+
+flight_new:
+    path:     /new
+    defaults: { _controller: "WCSCoavBundle:Flight:new" }
+    methods:  [GET, POST]
+
+flight_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "WCSCoavBundle:Flight:edit" }
+    methods:  [GET, POST]
+
+flight_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "WCSCoavBundle:Flight:delete" }
+    methods:  DELETE

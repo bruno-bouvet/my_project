@@ -1,0 +1,13 @@
+<?php
+
+namespace WCS\CoavBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Terrain
+ */
+class Terrain
+{
+   
+}

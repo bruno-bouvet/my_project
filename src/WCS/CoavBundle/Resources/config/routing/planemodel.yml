@@ -1,0 +1,24 @@
+planemodel_index:
+    path:     /
+    defaults: { _controller: "WCSCoavBundle:planeModel:index" }
+    methods:  GET
+
+planemodel_show:
+    path:     /{id}/show
+    defaults: { _controller: "WCSCoavBundle:planeModel:show" }
+    methods:  GET
+
+planemodel_new:
+    path:     /new
+    defaults: { _controller: "WCSCoavBundle:planeModel:new" }
+    methods:  [GET, POST]
+
+planemodel_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "WCSCoavBundle:planeModel:edit" }
+    methods:  [GET, POST]
+
+planemodel_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "WCSCoavBundle:planeModel:delete" }
+    methods:  DELETE

@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Flight</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ flight.id }}</td>
+            </tr>
+            <tr>
+                <th>Departure</th>
+                <td>{{ flight.departure }}</td>
+            </tr>
+            <tr>
+                <th>Arrival</th>
+                <td>{{ flight.arrival }}</td>
+            </tr>
+            <tr>
+                <th>Pilot</th>
+                <td>{{ flight.pilot }}</td>
+            </tr>
+            <tr>
+                <th>Freeseats</th>
+                <td>{{ flight.freeSeats }}</td>
+            </tr>
+            <tr>
+                <th>Takeoftime</th>
+                <td>{% if flight.takeofTime %}{{ flight.takeofTime|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('flight_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('flight_edit', { 'id': flight.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
